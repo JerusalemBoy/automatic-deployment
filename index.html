@@ -94,17 +94,30 @@
 
     <header>
         <h1>Git Auto-Deployment Pipeline</h1>
-        <p>Live DevOps Project on AWS EC2 using Native Git & Nginx</p>
+        <p>End-to-End CI/CD Automation with Jenkins, GitHub & AWS EC2</p>
     </header>
 
     <div class="container">
 
         <div class="pipeline">
             <h2>Deployment Architecture</h2>
+        <p>Developer → GitHub → Jenkins → Amazon Web Services EC2 → Apache Web Server</p>
 
-            <p>
-                VS Code → Git Push → EC2 Bare Repository → Post-Receive Hook → Nginx → Live Website
-            </p>
+<p>
+    Developer
+   │
+   ▼
+GitHub Repository
+   │  (Webhook Trigger)
+   ▼
+Jenkins Server (AWS EC2)
+   │  (Build & Deploy Script)
+   ▼
+Apache Web Server
+   │
+   ▼
+Live Website (Custom domain)
+</p>
 
             <p class="update">
                 Every <span class="highlight">git push production main</span> triggers automatic deployment.
@@ -116,7 +129,7 @@
     </div>
 
     <footer>
-        Built by <strong>Richard Joel</strong> | DevOps Project 2026 | AWS EC2 + Git Hooks + Nginx
+        Built by <strong>Richard Joel</strong> | DevOps Project 2026 | Developer → GitHub → Jenkins → Amazon Web Services EC2 → Apache Web Server
     </footer>
 
 </body>
